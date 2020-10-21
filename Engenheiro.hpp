@@ -16,7 +16,7 @@ class Engenheiro : public Empregado {
     int getProjetos() { return _projetos; }
 
   private:
-	  int _projetos;
+    int _projetos;
 };
 
 #endif

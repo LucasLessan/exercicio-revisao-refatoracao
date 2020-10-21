@@ -19,7 +19,7 @@ class Vendedor : public Empregado {
     double getQuota() { return _quotaMensalVendas; }
 
   private:
-	  double _quotaMensalVendas;
+    double _quotaMensalVendas;
 };
 
 #endif
