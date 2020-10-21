@@ -14,7 +14,7 @@ class Vendedor : public Empregado {
 
     virtual void imprime() override;
 
-	double quotaTotalAnual();
+    double quotaTotalAnual();
 
     double getQuota() { return _quotaMensalVendas; }
 
