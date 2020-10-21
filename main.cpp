@@ -8,7 +8,7 @@ int main() {
 
   // Criacao do vetor de empregados usando o numero de engenheiros e vendedores definidos acima
   Empregado* emp[TAMANHO_ENG + TAMANHO_VEN];
-  
+
   // Instanciacao dos empregados
   emp[0] = new Engenheiro("Joao Snow", 35, 9.5, 3);
   emp[1] = new Engenheiro("Daniela Targaryen", 30, 8, 1);
@@ -25,5 +25,5 @@ int main() {
   for(Empregado* e: emp)
     delete e;
 
-  return 0;	
+  return 0;
 }
