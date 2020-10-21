@@ -6,17 +6,19 @@ class Engenheiro : public Empregado {
 
   public:
 
-    Engenheiro(double salario, std::string nome, int proj, double horas), : Empregado(salario, nome, horas), projetos(proj) {}
+    Engenheiro(std::string nome, double salario, double horas, int projetos) : Empregado(nome, salario, horas), _projetos(projetos) {}
 
-    void imprime() override {
+    virtual ~Engenheiro() {}
+    
+    virtual void imprime() override {
       std::cout << "Nome: " << getNome() << std::endl <<
       "Salario Mes: " << pagamentoMes() << std::endl <<
-      "Projetos: " << projetos << std::endl << std::endl;
+      "Projetos: " << _projetos << std::endl << std::endl;
     }
 
-    int getProjetos() { return projetos; }
+    int getProjetos() { return _projetos; }
 
   private:
-	  int projetos;	
+	  int _projetos;
 };
 

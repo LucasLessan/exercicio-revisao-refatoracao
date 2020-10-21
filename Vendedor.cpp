@@ -6,19 +6,21 @@ class Vendedor : public Empregado {
 
   public:
 
-    Vendedor(double salario, std::string nome, double quota, double horas) : Empregado(salario, nome, horas), 
-      quotaMensalVendas(quota) {}
+    Vendedor(std::string nome, double salario, double horas, double quota) : Empregado(nome, salario, horas),
+      _quotaMensalVendas(quota) {}
 
-    void imprime() override {
+    virtual ~Vendedor() {}
+
+    virtual void imprime() override {
       std::cout << "Nome: " << getNome() << std::endl <<
       "Salario Mes: " << pagamentoMes() << std::endl <<
       "Quota Vendas: " << quotaTotalAnual() << std::endl << std::endl;
     }
 
-	  double quotaTotalAnual() { return quotaMensalVendas * 12; }
+	  double quotaTotalAnual() { return _quotaMensalVendas * 12; }
 
-    double getQuota() { return quotaMensalVendas; }
+    double getQuota() { return _quotaMensalVendas; }
 
   private:
-	  double quotaMensalVendas;  
+	  double _quotaMensalVendas;
 };
