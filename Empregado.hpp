@@ -11,23 +11,13 @@ class Empregado {
 
     virtual ~Empregado() {}
     
-    double pagamentoMes() {
+    double pagamentoMes() {}
 
-	    // Cálculo de hora extra (+50% se horasTrabalhadas > 8)
-      if (_horasTrabalhadas > 8) {
-        // As horas trabalhadas alem de 8 rendem 1.5 vezes o salario/hora, mais as 8 trabalhadas
-        // multiplicadas pelo valor da hora
-        return ((_horasTrabalhadas - 8) * 1.5 * _salarioHora) + (8 * _salarioHora); 
-      }
-	    
-      return _horasTrabalhadas * _salarioHora;
-    }
-
-    double getHorasTrabalhadas() { return _horasTrabalhadas; }
+    std::string getNome() { return _nome; }
 
     double getSalarioHora() { return _salarioHora; }
 
-    std::string getNome() { return _nome; }
+    double getHorasTrabalhadas() { return _horasTrabalhadas; }
 
     virtual void imprime() = 0;
 
