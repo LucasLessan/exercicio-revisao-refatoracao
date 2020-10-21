@@ -10,8 +10,8 @@ class Engenheiro : public Empregado {
     Engenheiro(std::string nome, double salario, double horas, int projetos) : Empregado(nome, salario, horas), _projetos(projetos) {}
 
     virtual ~Engenheiro() {}
-    
-    virtual void imprime() override {}
+
+    virtual void imprime() override;
 
     int getProjetos() { return _projetos; }
 

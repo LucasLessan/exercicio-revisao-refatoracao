@@ -4,14 +4,14 @@
 #include <string>
 
 class Empregado {
-	
+
   public:
 
     Empregado(std::string nome, double salario, double horas) : _nome(nome), _salarioHora(salario), _horasTrabalhadas(horas) {}
 
     virtual ~Empregado() {}
-    
-    double pagamentoMes() {}
+
+    double pagamentoMes();
 
     std::string getNome() { return _nome; }
 

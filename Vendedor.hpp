@@ -12,9 +12,9 @@ class Vendedor : public Empregado {
 
     virtual ~Vendedor() {}
 
-    virtual void imprime() override {}
+    virtual void imprime() override;
 
-	double quotaTotalAnual() { return _quotaMensalVendas * 12; }
+	double quotaTotalAnual();
 
     double getQuota() { return _quotaMensalVendas; }
 

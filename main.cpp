@@ -1,5 +1,5 @@
-#include "Engenheiro.cpp"
-#include "Vendedor.cpp"
+#include "Engenheiro.hpp"
+#include "Vendedor.hpp"
 
 #define TAMANHO_ENG 3 // Numero de engenheiros
 #define TAMANHO_VEN 3 // Numero de vendedores
